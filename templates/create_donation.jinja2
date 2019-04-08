@@ -3,9 +3,9 @@
 {% block subtitle %}Add Donations{% endblock subtitle %}
 
 {% block content %}
-    <form method="POST">
-        <label for="name">Donor Name: </label><input type="string" id="name" name="name">
+    <form method="POST" action="{{ url_for('add') }}">
+        <label for="donor">Donor Name: </label><input type="text" id="donor_name" name="donor">
         <label for="donation">Donation: </label><input type="number" id="donation" name="donation">
-        <input type="submit" value="Add Donation"
+        <input type="submit" value="Add Donation">
     </form>
 {% endblock content %}
